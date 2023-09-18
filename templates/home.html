@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+
+    <h1>welcome to my site</h1>
+    <ul>
+  
+    <!--<li> <a href="{{url_for('home')}}">Home </a></li>
+    <li> <a href="{{url_for('contact')}}">Contact </a></li>
+    <li> <a href="{{url_for('services')}}">Services </a></li>-->
+    <h1>My Calculator</h1>
+    <form action="{{url_for('form')}}" method="POST">
+          <input type="float" name="input1" placeholder="input1" required="required">
+          <br><br><br>
+          <input type="float" name="input2" placeholder="input2" required="required">
+
+          <!--<br><br><br>
+          <input type="text" name="history" placeholder="History" required="required">-->
+          
+          <br><br><br>
+          <button type="submit">Calculate</button>
+
+     </form>
+
+
+     <br><br><br>
+     Answer 
+
+       addition is {{result1}}
+       <br>
+       subtraction is {{result2}}
+       <br>
+       multiplication is {{result3}}
+       <br>
+       division is {{result4}}
+  
+      </ul>
+
+
+
+    
+
+    {% endblock  %}
